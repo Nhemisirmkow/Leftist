@@ -1,0 +1,28 @@
+(* Marcin Michorzewski *)
+(* testy zostaly wykonane na losowo wygenerowanych testach *)
+(* jedyny błąd wykryty to zbyt długi czas działania, który *)
+(* uległ zoptymalizowaniu. Optymalizacja polegała na  usu -*)
+(* nięciu operacji zamieniania synów danego wierzchołka w  *)
+(* funkcji join, nawet gdy ich wartości rpl były równe.    *)
+(* Od tego czasu program działa sprawnie i szybko.         *)
+(* Komendy:
+	Makefile:
+		make // Kompiluje pliki .ml
+		make generate // Kompiluje pliki .ml oraz generator testów
+		make clean // Sprząta folder ze śmieci, warto zrobić backupa na bb
+		wcześniej.
+
+	Jeśli ktoś nie posiada g++-5, to należy zmienić w jednej linii
+	makefile "g++-5 -std=c++14" na "g++ -std=c++11" lub g++-V, gdzie V
+	jest posiadaną wersją g++.
+
+	Generator:
+		./generate // Tworzy plik test.in oraz test.out
+
+	Testowanie:
+		./testuj.sh //Wykonuje make generate, sprawdza poprawność na pięciu
+		losowych testach. podaje czasy działania i czyści folder.
+		./testuj.sh LICZBA //Jak wyżej, ale na dowolnej naturalnej liczbie
+		testów.                                   *)
+
+	Treść znajduje się w pliku: Leftist [Ocaml, Polish]
